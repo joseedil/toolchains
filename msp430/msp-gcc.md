@@ -16,23 +16,29 @@ I'm using the msp430-gcc-full-osx-installer-9.2.0.0.app.zip file as reference.
 * `mspdebug is not installed by default and should be installed manually. It depends on the Boost library.
 I use Macports to install such dependencies.
 
-  ---
+  ~~~
   $ sudo port install boost
-  ---
+  ~~~
 
 * Clone the <https://github.com/dlbeer/mspdebug> repo somewhere:
 
-  ---
+  ~~~
   $ sudo git clone https://github.com/dlbeer/mspdebug
   $ cd mspdebug
-  ---
+  ~~~
 
 - Compile and install the tool:
 
-  ---
+  ~~~
   $ make BOOST_DIR=/opt/local
   $ sudo make install
   $ sudo cp /opt/ti/msp430/gcc/bin/libmsp430.dylib /usr/local/lib/
-  ---
+  ~~~
 
 The last command is to enable the `tilib` driver globally.
+
+* Add the toolchain to your PATH by appending the folling to your `~/.bashrc`:
+
+  ~~~
+  export PATH=$PATH:/opt/ti/msp430/gcc/bin/
+  ~~~
