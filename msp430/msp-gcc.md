@@ -17,13 +17,13 @@ I'm using the msp430-gcc-full-osx-installer-9.2.0.0.app.zip file as reference.
 I use Macports to install such dependencies.
 
   ~~~
-  $ sudo port install boost libusb
+  $ sudo port install boost libusb libusb-compat hidapi
   ~~~
 
 * Clone the <https://github.com/dlbeer/mspdebug> repo somewhere:
 
   ~~~
-  $ sudo git clone https://github.com/dlbeer/mspdebug
+  $ git clone https://github.com/dlbeer/mspdebug
   $ cd mspdebug
   ~~~
 
@@ -37,7 +37,7 @@ I use Macports to install such dependencies.
 
 The last command is to enable the `tilib` driver globally.
 
-* Add the toolchain to your PATH by appending the folling to your `~/.bashrc`:
+* Add the toolchain to your PATH by appending the following to your `~/.bashrc`:
 
   ~~~
   export PATH=$PATH:/opt/ti/msp430/gcc/bin/
